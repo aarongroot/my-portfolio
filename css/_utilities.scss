@@ -1,0 +1,17 @@
+@use 'colors' as *;
+
+.btn {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.75rem 2.1875rem;
+    color: white;
+    border-radius: 40px;
+    background: $skin-color;
+    display: inline-block;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
