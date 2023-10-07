@@ -1,5 +1,10 @@
 @use 'colors' as *;
 
+body {
+    background: $black-bg-900;
+}
+
+
 .btn {
     font-size: 1rem;
     font-weight: 500;
@@ -10,8 +15,52 @@
     display: inline-block;
     white-space: nowrap;
     transition: all 0.3s ease;
+    margin-bottom: 3rem;
+}
+
+.shadow-dark {
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
 .btn:hover {
     transform: scale(1.05);
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media screen and (min-width: 1010px) {
+    .section.back-section {
+        z-index: 1;
+    }
+
+    .section {
+        position: fixed;
+        left: 270px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &.active {
+            z-index: 2;
+            opacity: 1;
+            animation: slideSection 1s ease;
+        }
+    }
+
+
+
+    @keyframes slideSection {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
 }

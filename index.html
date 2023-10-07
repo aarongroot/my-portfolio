@@ -12,38 +12,44 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"
+        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
     <header>
         <div class="main-container">
             <nav class="aside">
-                <div class="logo">
-                    <h1 class=" sr-only">Aaron Groot</h1>
-                    <a href="#"><span>A</span>aron</a>
+                <div class="flex-head">
+                    <div class="logo">
+                        <h1 class=" sr-only">Aaron Groot</h1>
+                        <a href="#"><span>A</span>aron</a>
+                    </div>
+                    <button class="toggle-btn" aria-expanded="false" aria-controls="nav">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                            <title>menu</title>
+                            <path
+                                d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z" />
+                        </svg>
+                    </button>
                 </div>
-                <button class="toggle-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                        <title>menu</title>
-                        <path
-                            d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z" />
-                    </svg>
-                </button>
-                <ul class="nav">
-                    <li><a href="#" class="active"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="#"><i class="fa fa-user"></i> About</a></li>
-                    <li><a href="#"><i class="fa fa-briefcase"></i> Projects</a></li>
-                    <li><a href="#"><i class="fa fa-comments"></i> Contact</a></li>
+
+                <ul class="nav" id="nav">
+                    <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
+                    <li><a href="#projects"><i class="fa fa-briefcase"></i> Projects</a></li>
+                    <!-- <li><a href="#contact"><i class="fa fa-comments"></i> Contact</a></li> -->
                 </ul>
 
             </nav>
         </div>
     </header>
     <main>
-        <!-- **************************Home****************** -->
+        <!-- **************************Home************************************************************ -->
         <div class="main-content">
-            <section class="home section">
+            <section class="home active section" id="home">
                 <div class="container">
                     <div class="row">
                         <div class="home-info">
@@ -63,9 +69,278 @@
                 </div>
             </section>
         </div>
-        <!-- ***********************************About******************* -->
+        <!-- ***********************************About**************************************************** -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>About Me</h2>
+                    </div>
+                    <div class="row">
+                        <div class="about-content">
+                            <div class="row">
+                                <div class="about-text">
+                                    <h3>
+                                        I'm Aaron Groot and <span>Web Developer</span></h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Laudantium ab cumque similique ullam ut asperiores tempore delectus iusto,
+                                        corrupti vero eius vitae voluptates ipsam repudiandae, doloribus aspernatur
+                                        impedit maiores ducimus?</p>
 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="personal-info">
+                                    <div class="row">
+                                        <div class="info-item">
+                                            <p>Birthday: <span>30 June 1998</span></p>
+                                        </div>
+                                        <div class="info-item">
+                                            <p>GitHub: <a
+                                                    href="https://github.com/aarongroot"><span>github.com/aarongroot</span></a>
+                                            </p>
+                                        </div>
+                                        <div class="info-item">
+                                            <p>Email: <span>agroot963@gmail.com</span></p>
+                                        </div>
+                                        <div class="info-item">
+                                            <p>Diploma: <span>Web Design & Development</span></p>
+                                        </div>
+                                        <div class="info-item">
+                                            <p>Phone: <span>+1 (780) 983-3621</span></p>
+                                        </div>
+                                        <div class="info-item">
+                                            <p>City: <span>Edmonton AB</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="buttons">
+                                            <a href="#contact" class="btn hire-me">Hire Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skills">
+                                    <div class="row">
+                                        <div class="skill-item">
+                                            <h4>JS</h4>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 71%;"></div>
+                                                <div class="skill-percent">71%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <h4>CSS</h4>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 89%;"></div>
+                                                <div class="skill-percent">89%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <h4>PHP</h4>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 76%;"></div>
+                                                <div class="skill-percent">76%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <h4>HTML</h4>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 85%;"></div>
+                                                <div class="skill-percent">85%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="education">
+                                    <h3 class="title">Education</h3>
+                                    <div class="row">
+                                        <div class="timeline-box">
+                                            <div class="timeline shadow-dark">
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <p class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022 - Current
+                                                    </p>
+                                                    <h4 class="timeline-title">NAIT Diploma</h4>
+                                                    <p class="timeline-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Suscipit doloribus ex laboriosam debitis
+                                                        aliquam atque consequatur. Dolorem perferendis id
+                                                        necessitatibus? Eius sunt eos eligendi tempora temporibus
+                                                        nostrum sit delectus sint.</p>
+                                                </div>
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <p class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022 - Current
+                                                    </p>
+                                                    <h4 class="timeline-title">NAIT Diploma</h4>
+                                                    <p class="timeline-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Suscipit doloribus ex laboriosam debitis
+                                                        aliquam atque consequatur. Dolorem perferendis id
+                                                        necessitatibus? Eius sunt eos eligendi tempora temporibus
+                                                        nostrum sit delectus sint.</p>
+                                                </div>
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <p class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022 - Current
+                                                    </p>
+                                                    <h4 class="timeline-title">NAIT Diploma</h4>
+                                                    <p class="timeline-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Suscipit doloribus ex laboriosam debitis
+                                                        aliquam atque consequatur. Dolorem perferendis id
+                                                        necessitatibus? Eius sunt eos eligendi tempora temporibus
+                                                        nostrum sit delectus sint.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="education">
+                                    <h3 class="title">Experience</h3>
+                                    <div class="row">
+                                        <div class="timeline-box">
+                                            <div class="timeline shadow-dark">
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <p class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022 - Current
+                                                    </p>
+                                                    <h4 class="timeline-title">NAIT Diploma</h4>
+                                                    <p class="timeline-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Suscipit doloribus ex laboriosam debitis
+                                                        aliquam atque consequatur. Dolorem perferendis id
+                                                        necessitatibus? Eius sunt eos eligendi tempora temporibus
+                                                        nostrum sit delectus sint.</p>
+                                                </div>
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <p class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022 - Current
+                                                    </p>
+                                                    <h4 class="timeline-title">NAIT Diploma</h4>
+                                                    <p class="timeline-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Suscipit doloribus ex laboriosam debitis
+                                                        aliquam atque consequatur. Dolorem perferendis id
+                                                        necessitatibus? Eius sunt eos eligendi tempora temporibus
+                                                        nostrum sit delectus sint.</p>
+                                                </div>
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <p class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022 - Current
+                                                    </p>
+                                                    <h4 class="timeline-title">NAIT Diploma</h4>
+                                                    <p class="timeline-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Suscipit doloribus ex laboriosam debitis
+                                                        aliquam atque consequatur. Dolorem perferendis id
+                                                        necessitatibus? Eius sunt eos eligendi tempora temporibus
+                                                        nostrum sit delectus sint.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ****************************************Portfolio ************************************ -->
+        <section class="portfolio section" id="projects">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>
+                            Projects
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="portfolio-heading">
+                        <h3>My Latest Projects :</h3>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <!-- ***************Portfolio Item ********************** -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <a href="https://whitehorsewinterwonderland.netlify.app" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="https://picsum.photos/800" alt="Random picture">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ***************Portfolio Item ********************** -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <a href="https://whitehorsewinterwonderland.netlify.app" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="https://picsum.photos/800" alt="Random picture">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ***************Portfolio Item ********************** -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <a href="https://whitehorsewinterwonderland.netlify.app" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="https://picsum.photos/800" alt="Random picture">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ***************Portfolio Item ********************** -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <a href="https://whitehorsewinterwonderland.netlify.app" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="https://picsum.photos/800" alt="Random picture">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ***************Portfolio Item ********************** -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <a href="https://whitehorsewinterwonderland.netlify.app" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="https://picsum.photos/800" alt="Random picture">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ***************Portfolio Item ********************** -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <a href="https://whitehorsewinterwonderland.netlify.app" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="https://picsum.photos/800" alt="Random picture">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 

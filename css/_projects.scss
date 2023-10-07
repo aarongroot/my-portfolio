@@ -1,0 +1,42 @@
+@use 'colors' as *;
+
+
+.portfolio {
+
+
+    .portfolio-heading {
+        flex: 0 0 100%;
+
+        h3 {
+            color: $black-text-900;
+            font-weight: 500;
+            line-height: 3rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .portfolio-item {
+        flex: 0 0 calc(33.33% - 0.666rem);
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-item-inner {
+        border: 6px solid $black-bg-100;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .portfolio {
+        margin-top: 5rem;
+    }
+
+    .container {
+        .row {
+            .section-title {
+                margin-top: 5rem;
+            }
+        }
+    }
+}
