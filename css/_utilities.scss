@@ -14,8 +14,15 @@ body {
     background: $skin-color;
     display: inline-block;
     white-space: nowrap;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     margin-bottom: 3rem;
+    border: 2px solid $skin-color;
+}
+
+@keyframes change {
+    0% {
+        box-shadow: 0 0 0 0 $animation-color-1;
+    }
 }
 
 .shadow-dark {
@@ -24,7 +31,13 @@ body {
 
 .btn:hover {
     transform: scale(1.05);
+    animation: change 1s;
+    box-shadow: 0 0 0 3rem transparent;
+    background-color: white;
+    color: $skin-color;
+
 }
+
 
 .hidden {
     display: none !important;
